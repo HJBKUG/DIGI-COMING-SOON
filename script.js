@@ -10,7 +10,7 @@ if (particleCanvas) {
         particleCanvas.height = document.body.scrollHeight;
         // Regenerate particles to cover new dimensions
         particles = [];
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 200; i++) {
             particles.push({
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * particleCanvas.height,
@@ -37,7 +37,7 @@ if (particleCanvas) {
 
             pctx.beginPath();
             pctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            pctx.fillStyle = "rgba(0,255,255,0.8)";
+            pctx.fillStyle = "rgb(0, 255, 255)";
             pctx.fill();
         });
 
@@ -78,7 +78,7 @@ if (auroraCanvas) {
         for (let i = 0; i < 8; i++) {
             let gradient = ctx.createLinearGradient(0, bandY, auroraCanvas.width, bandY + bandHeight);
             gradient.addColorStop(0, "rgba(0,255,255,0)");
-            gradient.addColorStop(0.5, "rgba(4,104,104,0.35)");
+            gradient.addColorStop(0.5, "rgba(4, 104, 104, 0.13)");
             gradient.addColorStop(1, "rgba(0,255,255,0)");
 
             ctx.strokeStyle = gradient;

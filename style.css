@@ -9,9 +9,11 @@
 }
 
 body {
-    background: #031c3b !important;
+
+    background: #1d5fb0 url("bg.png") center center/cover no-repeat fixed;
     color: white !important;
     overflow-x: hidden;
+    background-color: rgba(11, 44, 94, 0.7);
 }
 
 /* =========================
@@ -40,9 +42,23 @@ body {
     overflow: hidden;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(rgba(4, 33, 76, 0.156),
+            rgba(68, 94, 133, 0.154));
+    z-index: 1;
+
+}
+
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-logo {
